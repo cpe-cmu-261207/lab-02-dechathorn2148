@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculate GPA</title>
+    </head>
+    <script src = "Calculate.js"></script>
+    <style>
+        
+    </style>
+    <body>
+        <p style="vertical-align: middle;" style="vertical-align: auto;"></p>
+            <button onclick="document.location='Home.html'">Home</button>
+            <button onclick="document.location='Gallery.html'">Gallery</button>
+            <button onclick="document.location='Gpa.html'">GPA Calculator</button>
+            <button onclick="document.location='Contact.html'">Contact</button>
+            <hr>
+        </p>
+        <h1>GPA</h1>
+            <table>
+                <td>
+                    <ul id = "subject-name-list">
+                        
+                    </ul>
+                </td>
+                <td style="padding-left: 120px;">
+                    <ul id = "subject-term-list">
+                        
+                    </ul>
+                </td>
+                <td style="padding-left: 120px;">
+                    <ul id = "subject-grade-list">
+                        
+                    </ul>
+                </td>
+            </table>
+            
+        <form id = "subject">
+            <input type="text" placeholder="Input your subject here." id = "subject-name">
+            <button type="submit" id="submit-subject">+</button>
+            <input type="text" placeholder="Input your term here." id = "subject-term">
+            <button type="submit" id="submit-term">+</button>
+            <input type="text" placeholder="Input your grade here." id = "subject-grade">
+            <button type="submit" id="submit-grade">+</button>
+            <button type="submit" id="cal-grade">Calculate</button>
+        </form>
+    </body>
+</html>
