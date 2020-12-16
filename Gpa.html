@@ -5,7 +5,15 @@
     </head>
     <script src = "Calculate.js"></script>
     <style>
-        
+        #subject{
+            text-align: center;
+        }
+        #header{
+            text-align: center;
+        }
+        #label-align{
+            margin-left: 1500px;
+        }
     </style>
     <body>
         <p style="vertical-align: middle;" style="vertical-align: auto;"></p>
@@ -15,33 +23,65 @@
             <button onclick="document.location='Contact.html'">Contact</button>
             <hr>
         </p>
-        <h1>GPA</h1>
-            <table>
-                <td>
-                    <ul id = "subject-name-list">
-                        
-                    </ul>
-                </td>
-                <td style="padding-left: 120px;">
-                    <ul id = "subject-term-list">
-                        
-                    </ul>
-                </td>
-                <td style="padding-left: 120px;">
-                    <ul id = "subject-grade-list">
-                        
-                    </ul>
-                </td>
-            </table>
+        <h1 id = "header">GPA Calculator</h1>
+        <hr>
             
         <form id = "subject">
-            <input type="text" placeholder="Input your subject here." id = "subject-name">
-            <button type="submit" id="submit-subject">+</button>
-            <input type="text" placeholder="Input your term here." id = "subject-term">
-            <button type="submit" id="submit-term">+</button>
-            <input type="text" placeholder="Input your grade here." id = "subject-grade">
-            <button type="submit" id="submit-grade">+</button>
+            <label for="Subject"><b>Subject:</b></label><input type="text" placeholder="Input your subject here." id = "subject-name">
+            <label for="Term"><b>Term:</b></label><select id="subject-term" name="term">
+                <option value="1">1</option>
+                <option value="2">2</option>
+              </select>
+            <label for="Grade"><b>Grade:</b></label>
+            <select id="grade" name="grade">
+                <option value="A">A</option>
+                <option value="B+">B+</option>
+                <option value="B">B</option>
+                <option value="C+">C+</option>
+                <option value="C">C</option>
+                <option value="D+">D+</option>
+                <option value="D">D</option>
+                <option value="F">F</option>
+              </select>
+            <button type="submit" id="submit">Submit</button>
+            <button type="submit" id="reset">Reset</button>
             <button type="submit" id="cal-grade">Calculate</button>
         </form>
+        <br>
+        <hr>
+        <form id = "term1">
+            <fieldset>
+                <h1 id = "header"><ins>ปีการศึกษาที่ 1</ins></h1>
+                <table>
+                    <td>
+                        <ol id = "subject-term1">
+                            
+                        </ol>
+                    </td>
+                </table>
+            </fieldset>
+            <hr>
+            <label for="Grade-term1" id="label-align"><b>เกรดที่ได้รับ : <label id="label-1"></label></b></label>
+        </form>
+        <hr>
+        <br>
+        <form id = "term2">
+            <fieldset>
+                <h1 id = "header"><ins>ปีการศึกษาที่ 2</ins></h1>
+                <table>
+                    <td>
+                        <ol id = "subject-term2">
+                            
+                        </ol>
+                    </td>
+                </table>
+            </fieldset>
+            <hr>
+            <label for="Grade-term2" id="label-align"><b>เกรดที่ได้รับ : <label id="label-2"></label></b></label>
+            <br>
+            <br>
+            <label for="Grade-term3" id="label-align"><b>เกรดเฉลี่ยที่ได้รับ : <label id="label-3"></label></b></label>
+        </form>
+        <hr>
     </body>
 </html>

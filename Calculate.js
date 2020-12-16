@@ -1,117 +1,128 @@
-document.addEventListener('DOMContentLoaded', function(){
-    document.querySelector('#submit-subject').disable = true;
-    document.querySelector('#submit-term').disable = true;
-    document.querySelector('#submit-grade').disable = true;
+var countSubjectTerm1 = 0;
+var countSubjectTerm2 = 0;
+var countAll = 0;
+var countGradeTerm1 = 0;
+var countGradeTerm2 = 0;
+var grade1 = 0;
+var grade2 = 0;
+var grade3 = 0;
+var text = 'เกรดที่ได้ :'
+var space = " ";
 
-    document.querySelector('#submit-subject').onclick = function(){
-        var subjectnamelist = document.querySelector('#subject-name-list');
-        var subjectname = document.querySelector('#subject-name');
-        var submitsubject = document.querySelector('#submit-subject');
+document.addEventListener('DOMContentLoaded', function(){
+    document.querySelector('#submit').disable = true;
+    
+    document.querySelector('#submit').onclick = function(){
+        var listterm1 = document.querySelector('#subject-term1');
+        var listterm2 = document.querySelector('#subject-term2');
+        var subject = document.querySelector('#subject-name');
+        var term = document.querySelector('#subject-term');
+        var grade = document.querySelector('#grade');
+        var texthtml = text;
 
         //Create new subject
-        var cresubjectnamelist = document.createElement('li');
-        var cresubject = document.createElement('span');
-        cresubject.innerHTML = subjectname.value;
+        var subjectlist = document.createElement('li');
+        var list = document.createElement('span');
+        list.innerHTML = subject.value + " " + texthtml + " " + grade.value;
 
-        //Create delete button
-        var deleteButtonSubject = document.createElement('button');
-        deleteButtonSubject.innerHTML = '\u2713';
-        deleteButtonSubject.onclick = function(){
-            subjectnamelist.removeChild(cresubjectnamelist);
-        } 
+        if(term.value == 1 && subject.value != ''){
+            if(grade.value == 'A'){
+                countGradeTerm1 = countGradeTerm1 + 4;
+            }
+            if(grade.value == 'B+'){
+                countGradeTerm1 = countGradeTerm1 + 3.5;
+            }
+            if(grade.value == 'B'){
+                countGradeTerm1 = countGradeTerm1 + 3;
+            }
+            if(grade.value == 'C+'){
+                countGradeTerm1 = countGradeTerm1 + 2.5;
+            }
+            if(grade.value == 'C'){
+                countGradeTerm1 = countGradeTerm1 + 2;
+            }
+            if(grade.value == 'D+'){
+                countGradeTerm1 = countGradeTerm1 + 1.5;
+            }
+            if(grade.value == 'D'){
+                countGradeTerm1 = countGradeTerm1 + 1;
+            }
+            if(grade.value == 'F'){
+                countGradeTerm1 = countGradeTerm1 + 0;
+            }
+            subjectlist.append(list);
 
-        if(subjectname.value.length !== 0){
-            //Append Subject to li
-            cresubjectnamelist.append(cresubject);
-            cresubjectnamelist.append(deleteButtonSubject);
-
-            //Append Subject to li
-            subjectnamelist.append(cresubjectnamelist);
-
-            //Reset input
-            subjectname.value = '';
-            submitsubject.disable = true;
+            listterm1.append(subjectlist);
+            subject.value = '';
+            countSubjectTerm1++;
+            countAll++;
             return false;
-        }
-        else{
-            alert('Please insert your subject.');
+        }else if(term.value == 2 && subject.value != ''){
+            if(grade.value == 'A'){
+                countGradeTerm2 = countGradeTerm2 + 4;
+            }
+            if(grade.value == 'B+'){
+                countGradeTerm2 = countGradeTerm2 + 3.5;
+            }
+            if(grade.value == 'B'){
+                countGradeTerm2 = countGradeTerm2 + 3;
+            }
+            if(grade.value == 'C+'){
+                countGradeTerm2 = countGradeTerm2 + 2.5;
+            }
+            if(grade.value == 'C'){
+                countGradeTerm2 = countGradeTerm2 + 2;
+            }
+            if(grade.value == 'D+'){
+                countGradeTerm2 = countGradeTerm2 + 1.5;
+            }
+            if(grade.value == 'D'){
+                countGradeTerm2 = countGradeTerm2 + 1;
+            }
+            if(grade.value == 'F'){
+                countGradeTerm2 = countGradeTerm2 + 0;
+            }
+            subjectlist.append(list);
+            
+            listterm2.append(subjectlist);
+            subject.value = '';
+            countSubjectTerm2++;
+            countAll++;
             return false;
-        }
-    }
-
-    document.querySelector('#submit-term').onclick = function(){
-        var subjecttermlist = document.querySelector('#subject-term-list');
-        var subjectterm = document.querySelector('#subject-term');
-        var submitterm = document.querySelector('#submit-term');
-
-        //Create new Term
-        var cretermlist = document.createElement('li');
-        var creterm = document.createElement('span');
-        cretermlist.innerHTML = subjectterm.value;
-
-        //Create delete button
-        var deleteButtonTerm = document.createElement('button');
-        deleteButtonTerm.innerHTML = '\u2713';
-        deleteButtonTerm.onclick = function(){
-            subjecttermlist.removeChild(cretermlist);
-        } 
-
-        if(subjectterm.value === "1" || subjectterm === "2"){
-            //Append Term to li
-            cretermlist.append(creterm);
-            cretermlist.append(deleteButtonTerm);
-
-            //Append Term to ul
-            subjecttermlist.append(cretermlist);
-
-            //Reset input
-            subjectterm.value = '';
-            submitterm.disable = true;
-            return false;
-        }
-        else{
-            subjectterm.value = '';
-            submitterm.disable = true;
-            alert('Please insert your subject term.');
-            return false;
-        }
-    }
-
-    document.querySelector('#submit-grade').onclick = function(){
-        var subjectgradelist = document.querySelector('#subject-grade-list');
-        var subjectgrade = document.querySelector('#subject-grade');
-        var submitgrade = document.querySelector('#submit-grade');
-
-        //Create new Grade
-        var cregradelist = document.createElement('li');
-        var cregrade = document.createElement('span');
-        cregrade.innerHTML = subjectgrade.value;
-
-        //Create delete button
-        var deleteButtonGrade = document.createElement('button');
-        deleteButtonGrade.innerHTML = '\u2713';
-        deleteButtonGrade.onclick = function(){
-            subjectgradelist.removeChild(cregradelist);
-        } 
-
-        if(subjectgrade.value === "A" || subjectgrade.value === "B+" || subjectgrade.value === "B" || subjectgrade.value === "C+" || subjectgrade.value === "C" || subjectgrade.value === "D+" || subjectgrade.value === "D" || subjectgrade.value === "F"){
-            //Append Subject to li
-            cregradelist.append(cregrade);
-            cregradelist.append(deleteButtonGrade);
-
-            //Append Subject to li
-            subjectgradelist.append(cregradelist);
-
-            //Reset input
-            subjectgrade.value = '';
-            submitgrade.disable = true;
-            return false;
-        }
-        else{
-            subjectgrade.value = '';
-            submitgrade.disable = true;
-            alert('Please insert your subject grade.');
+        }else{
+            alert('Please insert your subject.' + countSubjectTerm1 + ' ' + countSubjectTerm2 + ' ' + countAll + ' ' + countGradeTerm1);
             return false;
         }
     }
+
+    document.querySelector('#reset').onclick = function(){
+        countSubjectTerm1 = 0;
+        countSubjectTerm2 = 0;
+        countGradeTerm1 = 0;
+        countGradeTerm2 = 0;
+        countAll = 0;
+        subjectlist.removeChild(subjectlist);
+    }
+    
+    document.querySelector('#cal-grade').onclick = function(){
+        
+        grade1 = countGradeTerm1 / countSubjectTerm1;
+        grade2 = countGradeTerm2 / countSubjectTerm2;
+        grade3 = (countGradeTerm1 + countGradeTerm2) / countAll;
+        if(countSubjectTerm1 != 0){
+            document.querySelector('#label-1').innerHTML = grade1;
+            return false;
+        }
+        if(countSubjectTerm2 != 0){
+            document.querySelector('#label-2').innerHTML = grade2;
+            return false;
+        }
+        if(countAll != 0){
+            document.querySelector('#label-3').innerHTML = grade3;
+            return false;
+        }
+        alert('Please insert your subject.' + countSubjectTerm1 + ' ' + countSubjectTerm2 + ' ' + countAll + ' ' + countGradeTerm1);
+        return false;
+    }
+    
 });

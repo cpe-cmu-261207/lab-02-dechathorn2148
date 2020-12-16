@@ -3,6 +3,11 @@
     <head>
         <title>Contact</title>
     </head>
+    <style>
+        #contact{
+            text-align: center;
+        }
+    </style>
 <body>
     <p style="vertical-align: middle;" style="vertical-align: auto;"></p>
         <button onclick="document.location='Home.html'">Home</button>
@@ -13,7 +18,7 @@
     </p>
         <h1 style="text-align: center;"><ins>Contact</ins></h1>
         <hr>
-        <form style="text-align: left;">
+        <form id= "contact">
             <label for="fname">First name:</label>
             <input type="text" id="fname" name="fname" value=""><br>
             <label for="lname">Last name:</label>
@@ -22,12 +27,13 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="Email" name="Email" value=""><br>
             <label for="Phone">Phone:</label>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="Phone" name="Phone" value=""><br>
-            <br><input type="radio" id="male" name="gender" value="male">
-            <label for="male">Male</label><br>
-            <input type="radio" id="female" name="gender" value="female">
-            <label for="female">Female</label><br>
-            <input type="radio" id="other" name="gender" value="other">
-            <label for="other">Other</label><br>
+            <br><label for="Gender">Gender</label>
+            <select id="Gender" name="Gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+              </select>
+              <br>
             <br><input type="submit" value="Submit">
           </form>
           <hr>
