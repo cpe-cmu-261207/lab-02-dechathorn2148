@@ -3,15 +3,69 @@
     <head>
         <title>Gallery</title>
     </head>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+        }
+        .home{
+            /* background-image: url(image15.gif);
+            background-size: cover; */
+            background-color:rgb(0, 0, 0);
+        }
+        #contact{
+             text-align: center;
+         }
+        nav{
+             height: 80px;
+             width: 100%;
+             background: rgba(236, 147, 106, 0.8);
+        }
+        ul{
+            list-style-type: none;
+            float: right;
+            margin-top: 25px;
+            margin-right: 15px;
+        }
+        ul li{
+            display: inline-block;
+        }
+        ul li a{
+            font-size: 20px;
+            text-decoration: none;
+            color: #fff;
+            padding: 5px 20px;
+        }
+        ul li a.here,
+        ul li a:hover{
+            background: rgba(113, 255, 77, 0.4);
+            border-radius: 3px;
+        }
+        h1{
+            font-family: sans-serif;
+            text-align: center;
+            font-weight: 800;
+            color: #fff;
+        }
+        tr{
+            color: rgb(255, 255, 255);
+        }
+     </style>
 <body>
-    <p style="vertical-align: middle;" style="vertical-align: auto;"></p>
-        <button onclick="document.location='Home.html'">Home</button>
-        <button onclick="document.location='Gallery.html'">Gallery</button>
-        <button onclick="document.location='Gpa.html'">GPA Calculator</button>
-        <button onclick="document.location='Contact.html'">Contact</button>
-        <hr>
-    </p>
-        <h1 style="text-align: center;"><ins>Gallery</ins></h1>
+    <div class="home">
+        <nav>
+        <ul>
+            <li><a href="Home.html">HOME</a></li>
+            <li><a href="Profile.html">PROFILE</a></li>
+            <li><a href="Gallery.html">GALLERY</a></li>
+            <li><a href="Gpa.html">GPA CALCULATOR</a></li>
+            <li><a href="Contact.html">CONTACT</a></li>
+        </ul>
+        </nav>
+        <br>
+        <h1>GALLERY</h1>
+        <br>
     <p>
         <table style="width:100%">
             <tr>
@@ -57,5 +111,6 @@
 
         </table>
     </p>
+    </div>
 </body>
 </html>

@@ -4,35 +4,74 @@
         <title>Homepage</title>
     </head>
     <style>
-        #header{
-            text-align: center;
-        }
+       *{
+           padding: 0;
+           margin: 0;
+           font-family: sans-serif;
+       }
+       .home{
+           background: url(image15.gif) no-repeat;
+           background-size: cover;
+           height: 100vh;
+       }
+       nav{
+            height: 80px;
+            width: 100%;
+            background: rgba(0,0,0,0.4);
+       }
+       ul{
+           list-style-type: none;
+           float: right;
+           margin-top: 25px;
+           margin-right: 15px;
+       }
+       ul li{
+           display: inline-block;
+       }
+       ul li a{
+           font-size: 20px;
+           text-decoration: none;
+           color: #fff;
+           padding: 5px 20px;
+       }
+       ul li a.here,
+       ul li a:hover{
+           background: rgba(113, 255, 77, 0.4);
+           border-radius: 3px;
+       }
+       /* #text1{
+           font-size: 350px;
+           text-align: left;
+           font-weight: 700;
+           /* background-image: url(image14.gif);
+           -webkit-background-clip: text;   */
+           -webkit-text-fill-color: transparent;
+           -webkit-text-stroke: 8px rgb(255, 187, 124);
+       }
+       #text2{
+           font-size: 350px;
+           text-align: left;
+           font-weight: 700;
+           /* background-image: url(image14.gif);
+           -webkit-background-clip: text;   */
+           -webkit-text-fill-color: transparent;
+           -webkit-text-stroke: 8px rgb(255, 187, 124);
+       } */
     </style>
 <body>
-    <p ></p>
-        <button onclick="document.location='Home.html'">Home</button>
-        <button onclick="document.location='Gallery.html'">Gallery</button>
-        <button onclick="document.location='Gpa.html'">GPA Calculator</button>
-        <button onclick="document.location='Contact.html'">Contact</button>
-        <hr>
-    </p>
-        <h1 id = "header">PERSONAL PROFILE</h1>
-    <p style="text-align: center;">
-        <img src="Image1.png" width = "500" height="350">
-        <br><b>Dechathorn Intravijit</b>
-        <br><b>Student</b>
-        <hr>
-    <p style="text-align: left;">
-        <b>Name</b> : นายเดชาธร อินทรวิจิตร
-        <br><b>Age</b> : 19 ปี
-        <br><b>Sex</b> : ชาย
-        <br> <b>Skill</b> : ไม่มี 
-        <br> <b>Hobbies</b> : นอนพักผ่อน และ นั่งพักผ่อน
-        <br> <b>Education</b> : ประถมศึกษาที่ โรงเรียนมารดาอุปถัมภ์ จังหวัดแพร่
-        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;มัธยมศึกษาตอนต้นที่ โรงเรียนพิริยาลัย จังหวัดแพร่
-        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;มัธยมศึกษาตอนปลายที่ โรงเรียนพิริยาลัย จังหวัดแพร่
-        <br> <b>Email</b> : dechathorn_in@cmu.ac.th
-        <hr>
-    </p>
+    <div class="home">
+        <nav>
+        <ul>
+            <li><a href="Home.html">HOME</a></li>
+            <li><a href="Profile.html">PROFILE</a></li>
+            <li><a href="Gallery.html">GALLERY</a></li>
+            <li><a href="Gpa.html">GPA CALCULATOR</a></li>
+            <li><a href="Contact.html">CONTACT</a></li>
+        </ul>
+        </nav>
+        <!-- <p id = "text1">WEL</p>
+        <br>
+        <p id = "text2">COME</p> -->
+    </div>
 </body>
 </html>

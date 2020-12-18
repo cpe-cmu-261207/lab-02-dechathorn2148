@@ -4,39 +4,94 @@
         <title>Contact</title>
     </head>
     <style>
-        #contact{
-            text-align: center;
-        }
+       *{
+           padding: 0;
+           margin: 0;
+           font-family: sans-serif;
+       }
+       .home{
+           background: url(image16.jpg) no-repeat;
+           background-size: cover;
+           height: 100vh;
+       }
+       nav{
+            height: 80px;
+            width: 100%;
+            background: rgba(0,0,0,0.4);
+       }
+       ul{
+           list-style-type: none;
+           float: right;
+           margin-top: 25px;
+           margin-right: 15px;
+       }
+       ul li{
+           display: inline-block;
+       }
+       ul li a{
+           font-size: 20px;
+           text-decoration: none;
+           color: #fff;
+           padding: 5px 20px;
+       }
+       ul li a.here,
+       ul li a:hover{
+           background: rgba(113, 255, 77, 0.4);
+           border-radius: 3px;
+       }
+       h1{
+           font-family: sans-serif;
+           font-weight: 800;
+           color: #fff;
+       }
+       input[type=text]{    
+           align-items: center;
+           width: 500px;
+           border: 2px solid #aaa;
+           border-radius: 4px;
+           margin: 8px 0;
+           outline: none;
+           padding: 8px;
+           box-sizing: border-box;
+       }
+       input[type=text]:focus{    
+           border-color: dodgerblue;
+           box-shadow: 0 0 8px 0 dodgerblue;
+       }
+       .set{
+            margin-left: 710px;
+       }
+       #set2{
+           height: 200px;
+       }
+       #set3{
+           margin-left: 400px;
+           width: 100px;
+           height: 50px;
+       }
     </style>
 <body>
-    <p style="vertical-align: middle;" style="vertical-align: auto;"></p>
-        <button onclick="document.location='Home.html'">Home</button>
-        <button onclick="document.location='Gallery.html'">Gallery</button>
-        <button onclick="document.location='Gpa.html'">GPA Calculator</button>
-        <button onclick="document.location='Contact.html'">Contact</button>
-        <hr>
-    </p>
-        <h1 style="text-align: center;"><ins>Contact</ins></h1>
-        <hr>
-        <form id= "contact">
-            <label for="fname">First name:</label>
-            <input type="text" id="fname" name="fname" value=""><br>
-            <label for="lname">Last name:</label>
-            <input type="text" id="lname" name="lname" value=""><br>    
-            <label for="Email">Email:</label>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="Email" name="Email" value=""><br>
-            <label for="Phone">Phone:</label>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="Phone" name="Phone" value=""><br>
-            <br><label for="Gender">Gender</label>
-            <select id="Gender" name="Gender">
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-                <option value="Other">Other</option>
-              </select>
-              <br>
-            <br><input type="submit" value="Submit">
-          </form>
-          <hr>
-    
+    <div class = "home">
+    <nav>
+        <ul>
+            <li><a href="Home.html">HOME</a></li>
+            <li><a href="Profile.html">PROFILE</a></li>
+            <li><a href="Gallery.html">GALLERY</a></li>
+            <li><a href="Gpa.html">GPA CALCULATOR</a></li>
+            <li><a href="Contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+    <br>
+        <h1 style="text-align: center;">CONTACT</h1>
+    <br>
+    <div class = "set">
+    <input type="text" placeholder="firstname"><br>
+    <input type="text" placeholder="lastname"><br>
+    <input id = "set2" type="text" placeholder="message"><br>
+    <input type="text" placeholder="email"><br>
+    <input type="text" placeholder="your phone number"><br>
+    <input id = "set3" type="button" value="Send">
+    </div>
+    </div>
 </body>
 </html>
