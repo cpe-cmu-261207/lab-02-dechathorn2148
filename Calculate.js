@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function(){
             countAll++;
             return false;
         }else{
-            alert('Please insert your subject.' + countSubjectTerm1 + ' ' + countSubjectTerm2 + ' ' + countAll + ' ' + countGradeTerm1);
+            alert('Please insert your subject.');
             return false;
         }
     }
@@ -111,17 +111,18 @@ document.addEventListener('DOMContentLoaded', function(){
         grade3 = (countGradeTerm1 + countGradeTerm2) / countAll;
         if(countSubjectTerm1 != 0){
             document.querySelector('#label-1').innerHTML = grade1;
-            return false;
         }
         if(countSubjectTerm2 != 0){
             document.querySelector('#label-2').innerHTML = grade2;
-            return false;
         }
         if(countAll != 0){
             document.querySelector('#label-3').innerHTML = grade3;
+        }
+        if(countSubjectTerm1 === 0 && countSubjectTerm2 === 0){
+            alert('Please insert your subject');
             return false;
         }
-        alert('Please insert your subject.' + countSubjectTerm1 + ' ' + countSubjectTerm2 + ' ' + countAll + ' ' + countGradeTerm1);
+        
         return false;
     }
     

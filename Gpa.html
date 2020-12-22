@@ -5,6 +5,9 @@
     </head>
     <script src = "Calculate.js"></script>
     <style>
+        *{
+            font-family: sans-serif;
+        }
         #subject{
             text-align: center;
         }
@@ -14,16 +17,45 @@
         #label-align{
             margin-left: 1500px;
         }
+        nav{
+             height: 80px;
+             width: 100%;
+             background: rgba(236, 147, 106, 0.8);
+        }
+        ul{
+            list-style-type: none;
+            float: right;
+            margin-top: 25px;
+            margin-right: 15px;
+        }
+        ul li{
+            display: inline-block;
+        }
+        ul li a{
+            font-size: 20px;
+            text-decoration: none;
+            color: #fff;
+            padding: 5px 20px;
+        }
+        ul li a.here,
+        ul li a:hover{
+            background: rgba(113, 255, 77, 0.4);
+            border-radius: 3px;
+        }
+        tr{
+            color: rgb(0, 0, 0);
+        }
     </style>
     <body>
-        <p style="vertical-align: middle;" style="vertical-align: auto;"></p>
-            <button onclick="document.location='index.html'">Home</button>
-            <button onclick="document.location='Profile.html'">Profile</button>
-            <button onclick="document.location='Gallery.html'">Gallery</button>
-            <button onclick="document.location='Gpa.html'">GPA Calculator</button>
-            <button onclick="document.location='Contact.html'">Contact</button>
-            <hr>
-        </p>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="Profile.html">PROFILE</a></li>
+                <li><a href="Gallery.html">GALLERY</a></li>
+                <li><a href="Gpa.html">GPA CALCULATOR</a></li>
+                <li><a href="Contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
         <h1 id = "header">GPA Calculator</h1>
         <hr>
             
